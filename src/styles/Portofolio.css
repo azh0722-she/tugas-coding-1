@@ -1,0 +1,37 @@
+/* Hilangkan atau komentari .grid lama Anda */
+
+#Portofolio {
+  padding: 50px 0;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.item h4 {
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* Custom Swiper Styles */
+.swiper {
+  padding-bottom: 50px; /* Ruang untuk pagination dots */
+}
+
+/* Warna tombol navigasi (panah) */
+.swiper-button-next, .swiper-button-prev {
+  color: #000; 
+}
+
+/* Warna pagination dots */
+.swiper-pagination-bullet-active {
+  background: #000;
+}
