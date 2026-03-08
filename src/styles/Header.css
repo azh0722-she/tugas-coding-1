@@ -43,7 +43,11 @@ header {
   display: flex;
   gap: 20px;
 }
-
+.imgages {
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+}
 .socialMedia > a {
   background-color: #222831;
   color: #fff;

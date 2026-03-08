@@ -10,7 +10,7 @@ function Header() {
     <>
       <header>
         <div className="header-jumbotron">
-          <img src={WhatAppImage} alt="Profile Picture" />
+          <img className='imgages' src={WhatAppImage} alt="Profile Picture" />
           <h3>Azzah Alya</h3>
           <p>Student in MAN 1 MODEL Banda Aceh</p>
           <div className='socialMedia'>
