@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   font-size: 16px;
@@ -11,26 +10,39 @@ body {
   scroll-behavior: smooth;
   background-color: #dedede;
 }
+
 .wrapper {
   width: 1024px;
   margin: auto;
   padding: 20px 0px 20px 0px;
-}.loading-container {
+}
+
+.loading-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #94e2f3; /* Menyesuaikan warna biru di gambar Anda */
+  background-color: #94e2f3;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Pastikan di atas elemen lain */
+  z-index: 9999;
+}
+
+.loading-container::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
 #contact {
   padding: 80px 0;
-  background-color: #94e2f3; /* Warna biru muda sesuai gambar */
+  background-color: #94e2f3;
   text-align: center;
 }
 
@@ -53,7 +65,6 @@ body {
   margin-bottom: 20px;
 }
 
-
 .input-group input, .input-group textarea {
   width: 100%;
   padding: 12px 15px;
@@ -61,33 +72,44 @@ body {
   border-radius: 8px;
   outline: none;
   font-family: inherit;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  border-left: 3px solid transparent;
 }
 
 .input-group input:focus, .input-group textarea:focus {
+  border-left: 5px solid #4a90e2;
+  padding-left: 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
   border-color: #4a90e2;
 }
 
 .btn-submit {
   width: 100%;
   padding: 15px;
-  background-color: #4a90e2; /* Warna tombol biru solid */
+  background-color: #4a90e2;
   color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-submit:hover {
-  background-color: #357abd;
-  transform: translateY(-2px);
+  background-color: #2980b9;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.btn-submit:active {
+  transform: translateY(-1px);
+}
+
 section {
   padding: 50px 0px 50px 0px;
 }
-
 
 .wrapper > h3,
 .wrapper > h1 {
@@ -101,6 +123,7 @@ section {
   text-transform: uppercase;
   border-bottom: 5px solid #cccccc;
 }
+
 .wrapper > h3::after,
 .wrapper > h1::after {
   content: "";
@@ -108,45 +131,21 @@ section {
   border-bottom: 5px solid #aa392d;
   width: 25%;
   position: relative;
-  bottom: -5px; /* your padding + border-width */
+  bottom: -5px;
   margin: auto;
 }
 
-
-@media only screen and (max-width: 1000px) {
-  .wrapper {
-    width: 80%;
-/* Efek Hover yang lebih halus pada tombol */
-.btn-submit {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.btn-submit:hover {
-  background-color: #2980b9;
-  transform: translateY(-5px); /* Tombol naik sedikit */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-.input-group input, .input-group textarea {
-  transition: all 0.3s ease-in-out;
-  border-left: 3px solid transparent; /* Awalnya transparan */
-}
-
-.input-group input:focus, .input-group textarea:focus {
-  border-left: 5px solid #4a90e2; /* Muncul aksen garis di kiri */
-  padding-left: 20px; /* Teks sedikit bergeser ke kanan */
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
-}
-/* Definisikan gerakan mengambang */
+/* Animations */
 @keyframes floating {
   0% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(2deg); }
   100% { transform: translateY(0px) rotate(0deg); }
 }
 
-/* Terapkan pada ikon */
-/* Ganti .icon-class dengan nama class ikon Anda */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .icon-class, i, img.icon {
   display: inline-block;
   animation: floating 3s ease-in-out infinite;
@@ -154,27 +153,14 @@ section {
 }
 
 .icon-class:hover, i:hover {
-  animation-play-state: paused; /* Berhenti mengambang saat disentuh */
-  transform: scale(1.2) rotate(10deg); /* Membesar sedikit */
+  animation-play-state: paused;
+  transform: scale(1.2) rotate(10deg);
   color: #aa392d;
 }
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
 
-.loading-container::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(255,255,255,0.3);
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-.btn-submit:active {
-  transform: translateY(-1px); /* Efek klik saat ditekan */
-}
-    
+/* Media Query */
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    width: 80%;
   }
 }
