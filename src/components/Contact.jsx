@@ -21,7 +21,7 @@ function Contact() {
   return (
     <section id="contact">
       <div className="wrapper">
-        <h3>Hubungi Saya</h3>
+        <h3>Hubungi Saya </h3>
         <p>Punya pertanyaan atau ingin bekerja sama? Kirimkan pesan di bawah ini!</p>
         
         <form ref={form} onSubmit={sendEmail} className="contact-form">

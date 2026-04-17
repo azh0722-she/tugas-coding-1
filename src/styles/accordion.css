@@ -1,0 +1,57 @@
+.accordion-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-title {
+  width: 100%;
+  padding: 18px 25px;
+  background-color: #e3f2fd; /* Biru langit muda */
+  color: #0d47a1; /* Biru tua */
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.accordion-title:hover {
+  background-color: #bbdefb;
+}
+
+.accordion-title.active {
+  background-color: #90caf9;
+  border-bottom: 2px solid #ffffff;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion-panel.open {
+  max-height: 200px; /* Atur sesuai kebutuhan konten */
+}
+
+.content {
+  padding: 20px 25px;
+  color: #1e69eb;
+  line-height: 1.6;
+}
+
+.icon {
+  font-size: 1.5rem;
+}

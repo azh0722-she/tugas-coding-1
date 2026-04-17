@@ -1,0 +1,68 @@
+.translate-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e3f2fd; /* Biru langit */
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(79, 60, 223, 0.15);
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+  border: 1px solid #bbdefb;
+}
+
+.translate-label {
+  font-size: 12px;
+  color: #0d47a1;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Menyembunyikan banner Google yang mengganggu di atas */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+/* Menghilangkan elemen default Google yang mengganggu */
+.goog-te-gadget {
+  font-family: 'Segoe UI', sans-serif !important;
+  color: transparent !important; /* Sembunyikan teks "Powered by" */
+}
+
+/* Mengubah tampilan dropdown */
+.goog-te-combo {
+  background: rgba(255, 255, 255, 0.1) !important; /* Efek Transparan */
+  backdrop-filter: blur(10px) !important; /* Efek Blur Kaca */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  padding: 8px 15px !important;
+  border-radius: 20px !important;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Efek saat dropdown diarahkan kursor */
+.goog-te-combo:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Menyembunyikan Logo Google di dalam widget */
+.goog-te-gadget img {
+  display: none !important;
+}
+
+/* Memperbaiki posisi agar tidak bertumpuk seperti di gambar */
+#google_translate_element {
+  display: inline-block;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

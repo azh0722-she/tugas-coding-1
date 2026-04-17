@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageNotFound from './pages/PageNotFound';
 import Experience from './pages/Experience';
 import Loading from './components/Loading'; // Import komponen loading
-
+import GoogleTranslate from './components/GoogleTranslate'; // Import komponen Google Translate
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,6 +27,7 @@ function App() {
   // Jika selesai loading, tampilkan router utama
   return (
     <BrowserRouter>
+      <GoogleTranslate /> {/* Tambahkan komponen Google Translate di sini */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Portofolio/:id' element={<DetailPortofolio />} />

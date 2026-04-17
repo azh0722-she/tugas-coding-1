@@ -1,11 +1,11 @@
 header {
-  background-color: #39404a;
+  background-color: #70c2fd;
   height: 100vh;
   background-position: center center;
   position: relative;
   font-family: "Kanit", sans-serif;
   letter-spacing: 5px;
-  text-shadow: 0 0 4px #000;
+  text-shadow: 0 0 4px #3f8ff0;
 }
 
 .header-jumbotron {
@@ -49,7 +49,7 @@ header {
   border-radius: 50%;
 }
 .socialMedia > a {
-  background-color: #222831;
+  background-color: #377adf;
   color: #fff;
   width: 80px;
   height: 80px;
@@ -63,7 +63,7 @@ header {
   width: auto;
 }
 .socialMedia > a:hover {
-  background-color: #aa392d;
+  background-color: #2378cd;
 }
 
 @media only screen and (max-width: 1000px) {

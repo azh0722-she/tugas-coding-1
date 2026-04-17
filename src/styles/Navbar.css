@@ -1,5 +1,5 @@
 nav {
-  background-color: #222831;
+  background-color: hsl(205, 86%, 52%);
   color: #fff;
   position: sticky;
   top: 0;
@@ -62,13 +62,13 @@ nav > .wrapper > button > svg {
   }
   .menu {
     text-align: right;
-  }
+  } 
   nav > .wrapper > button {
     display: inline;
   }
   .menu > ul {
     flex-direction: column;
-    background-color: #000;
+    background-color: hsl(205, 86%, 52%);
     width: 100%;
     position: fixed;
     top: 70px;
@@ -84,6 +84,6 @@ nav > .wrapper > button > svg {
     width: 100%;
   }
   .menu > ul > li > a:hover {
-    background-color: #222831;
+    background-color: #1f1bf5;
   }
 }
